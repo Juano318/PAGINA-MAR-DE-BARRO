@@ -1,62 +1,65 @@
-import ProductCard from "@/components/product-card"
-import ProductFilter from "@/components/product-filter"
+import ProductCard from "@/components/product-card";
+import ProductFilter from "@/components/product-filter";
 
 // Datos de ejemplo para productos
 const products = [
   {
     id: 1,
-    name: "Taza Oceánica",
-    description: "Taza de cerámica con tonos azules inspirada en el mar",
+    name: "Bowl vela",
+    description: "Bowl con un vela hecho a mano y un diseño original",
     price: 25,
-    image: "/placeholder.svg?height=500&width=500",
-    category: "vajilla",
+    image: "/bowl1.jpeg?height=500&width=500",
+    category: "velas",
   },
   {
     id: 2,
-    name: "Plato Tierra",
-    description: "Plato artesanal con acabados en tonos terrosos",
+    name: "Bowl vela",
+    description: "Bowl con vela y un diseño con relieve alrededor del bowl",
     price: 30,
-    image: "/placeholder.svg?height=500&width=500",
-    category: "vajilla",
+    image: "/bowl2.jpeg?height=500&width=500",
+    category: "velas",
   },
   {
     id: 3,
-    name: "Jarrón Ondas",
-    description: "Jarrón decorativo con patrón de ondas marinas",
+    name: "Bowl",
+    description: "Bowl para ensaladas con colores oceanicos",
     price: 45,
-    image: "/placeholder.svg?height=500&width=500",
-    category: "decoración",
+    image: "/bowl.jpeg?height=500&width=500",
+    category: "platos",
   },
   {
     id: 4,
-    name: "Maceta Rústica",
-    description: "Maceta de cerámica con textura natural",
+    name: "Plato grulla",
+    description:
+      "Un plato de ceramica con un diseño de una grulla y ramas con flores",
     price: 35,
-    image: "/placeholder.svg?height=500&width=500",
-    category: "jardín",
+    image: "/platoGrulla.jpeg?height=500&width=500",
+    category: "platos",
   },
   {
     id: 5,
-    name: "Bowl Mediterráneo",
-    description: "Bowl grande con esmalte azul mediterráneo",
+    name: "Shot de expresso",
+    description: "Vaso de tamaño pequeño usado para pequeños shots de cafe",
     price: 40,
-    image: "/placeholder.svg?height=500&width=500",
-    category: "vajilla",
+    image: "/vasoShot.jpeg?height=500&width=500",
+    category: "vasos",
   },
   {
     id: 6,
-    name: "Porta Velas Arena",
-    description: "Porta velas con textura arenosa y tono natural",
+    name: "Florero",
+    description: "Florero de color gris de ceramica",
     price: 22,
-    image: "/placeholder.svg?height=500&width=500",
+    image: "/florero.jpeg?height=500&width=500",
     category: "decoración",
   },
-]
+];
 
 export default function ProductsPage() {
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-4xl font-bold mb-8 text-stone-800">Nuestros Productos</h1>
+      <h1 className="text-4xl font-bold mb-8 text-stone-800">
+        Nuestros Productos
+      </h1>
 
       <div className="flex flex-col md:flex-row gap-8">
         <aside className="w-full md:w-1/4">
@@ -72,5 +75,5 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }

@@ -1,46 +1,54 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { toast } from "@/hooks/use-toast"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { toast } from "@/hooks/use-toast";
 
 export default function Newsletter() {
-  const [email, setEmail] = useState("")
+  const [email, setEmail] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Aquí iría la lógica para suscribir al usuario
     toast({
       title: "¡Gracias por suscribirte!",
       description: "Pronto recibirás nuestras novedades.",
-    })
-    setEmail("")
-  }
+    });
+    setEmail("");
+  };
 
   return (
-    <section className="py-20 bg-amber-50">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl font-bold mb-4 text-stone-800">Mantente Conectado</h2>
-        <p className="text-lg text-stone-600 mb-8 max-w-2xl mx-auto">
-          Suscríbete a nuestro boletín para recibir novedades sobre nuevos productos, eventos y ofertas especiales.
-        </p>
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto flex gap-2">
-          <Input
-            type="email"
-            placeholder="Tu correo electrónico"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="flex-1"
-          />
-          <Button type="submit" className="bg-amber-700 hover:bg-amber-800">
-            Suscribirse
-          </Button>
-        </form>
+    <section className="py-20 bg-blue-600">
+      <div className="container mx-auto px-4">
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-4 text-white">
+            Suscríbete a Nuestro Newsletter
+          </h2>
+          <p className="text-blue-100 mb-8">
+            Recibe actualizaciones sobre nuevos productos, eventos y ofertas
+            especiales.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Input
+              type="email"
+              placeholder="Tu correo electrónico"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="flex-1 bg-white/10 border-blue-400 text-white placeholder:text-blue-200"
+            />
+            <Button
+              type="submit"
+              className="bg-white text-blue-600 hover:bg-blue-50"
+            >
+              Suscribirse
+            </Button>
+          </div>
+        </div>
       </div>
     </section>
-  )
+  );
 }
