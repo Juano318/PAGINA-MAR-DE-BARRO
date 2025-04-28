@@ -31,7 +31,7 @@ export default function Home() {
               size="lg"
               className="bg-blue-600 hover:bg-blue-700 text-white"
             >
-              <Link href="/productos">Ver Productos XD</Link>
+              <Link href="/productos">Ver Productos</Link>
             </Button>
             <Button
               asChild
